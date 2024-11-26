@@ -1,0 +1,40 @@
+In most programming languages, what is the syntax for a FOR loop?
+a) for (initialize; condition; update),
+b) while (condition){},
+c) if (condition) { },
+d) repeat (condition) {}, A
+How does the FOR loop differ from a WHILE loop?
+a) The FOR loop is used for indefinite iteration while the WHILE loop is used for definite iteration,
+b) The FOR loop is used for definite iteration while the WHILE loop is used for indefinite iteration,
+c) There is no difference; FOR and WHILE loops are interchangeable,
+d) The FOR loop is only used in specific programming languages while the WHILE loop is universal, B
+What is the purpose of the CONTINUE statement within a FOR loop?
+a) To terminate the loop prematurely,
+b) To skip the rest of the code in the loop and move to the next iteration,
+c) To exit the entire program, 
+d) To restart the loop from the beginning, B
+In a FOR loop, what is the role of the iteration variable?
+a) It represents the number of iterations completed,
+b) It holds the final result of the loop,
+c) It controls the loop's termination condition, 
+d) It takes on different values during each iteration, D
+What is the purpose of the RANGE function commonly used with FOR loops in Python?
+a) To generate a sequence of numbers that the loop iterates over, 
+b) To specify the range of memory used by the loop ,
+c) To define the data type of the loop variable ,
+d) To determine the maximum number of iterations for the loop, A
+How can you create an infinite loop using a FOR loop?
+a) Use a negative increment in the update expression, 
+b) Omit the update expression,
+c) Set the condition to always be true, 
+d) Use a BREAK statement inside the loop, C
+In a FOR loop, if you want to iterate over elements in an array, what should be used as the iteration variable?
+a) The array itself,
+b) The length of the array,  
+c) The index of the array elements,
+d) A separate counter variable, C
+In C++, which of the following statements accurately describes a characteristic of multidimensional arrays?
+a) Multidimensional arrays must have the same data type for all elements,
+b) The size of each dimension in a multidimensional array must be known at compile time,
+c) Multidimensional arrays can have different sizes for each dimension,
+d) Accessing elements in a multidimensional array requires nested loops, A
