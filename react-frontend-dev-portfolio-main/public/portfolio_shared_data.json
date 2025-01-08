@@ -1,0 +1,48 @@
+{
+    "basic_info": {
+      "name": "Apampa Mardiyyah",
+      "titles": [ "Computer Science Major", "Data Analyst" ],
+      "social": [
+        {
+          "name": "github",
+          "url": "https://github.com/Mardiyyah-Apampa/Project.git",
+          "class": "fab fa-github"
+        },
+        {
+          "name": "Linkedln",
+          "url": "https://www.linkedin.com/in/mardiyyah-apampa-854570298",
+          "class": "fab fa-linkedin"
+        }
+      ],
+      "image": "myProfile.jpg"
+    },
+    "skills": {
+      "icons": [
+        {
+          "name": "C++",
+          "class": "devicon-cplusplus-plain",
+          "level": "70"  
+        },
+        {
+          "name": "Python",
+          "class": "devicon-python-plain",
+          "level": "25"
+        },
+        {
+          "name": "PowerBi",
+          "class": "devicon-tableau-plain",
+          "level": "60"
+        },
+        {
+          "name": "Rust",
+          "class": "devicon-rust-plain",
+          "level": "25"
+        },
+        {
+          "name": "MySql",
+          "class": "devicon-mysql-plain",
+          "level": "45"
+        }
+      ]
+    }
+  }
