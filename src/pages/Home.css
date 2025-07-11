@@ -1,0 +1,44 @@
+.card-grid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem; /* Increased gap between buttons */
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+.action-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  border-radius: 40px;
+  width: 320px;       /* Made longer */
+  height: 110px;      /* Slightly taller */
+  padding: 1rem;
+  font-weight: bold;
+  font-size: 1.1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
+}
+
+.action-button:hover {
+  transform: translateY(-2px);
+}
+
+.action-btn-navy {
+  background-color: #0f1d40;
+  color: white;
+}
+
+.action-btn-light {
+  background-color: #e0f2fe;
+  color: #0f1d40;
+}
+
+.action-image {
+  width: 32px;
+  height: 32px;
+  margin-bottom: 0.5rem;
+}

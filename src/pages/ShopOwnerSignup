@@ -1,0 +1,120 @@
+// src/pages/ShopOwnerSignup.js
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import './ShopOwnerSignup.css';
+import { useNavigate } from 'react-router-dom';
+
+function ShopOwnerSignup() {
+  const [formData, setFormData] = useState({
+    username: '',
+    email: '',
+    phone: '',
+    university: '',
+    password: '',
+    confirmPassword: '',
+    shopName: '',
+    shopLocation: '',
+    shopScope: 'Local',
+    termsAccepted: false,
+  });
+
+  const [errors, setErrors] = useState({});
+  const navigate = useNavigate();
+
+  const handleChange = (e) => {
+    const { name, value, type, checked } = e.target;
+    setFormData({
+      ...formData,
+      [name]: type === 'checkbox' ? checked : value,
+    });
+  };
+
+  const validate = () => {
+    let tempErrors = {};
+    if (!formData.username) tempErrors.username = 'Username is required';
+    if (!formData.email) tempErrors.email = 'Email is required';
+    if (!formData.phone) tempErrors.phone = 'Phone number is required';
+    if (!formData.university) tempErrors.university = 'Select a university';
+    if (!formData.password) tempErrors.password = 'Password is required';
+    if (formData.password !== formData.confirmPassword)
+      tempErrors.confirmPassword = 'Passwords do not match';
+    if (!formData.shopName) tempErrors.shopName = 'Shop name is required';
+    if (!formData.shopLocation) tempErrors.shopLocation = 'Shop location is required';
+    if (!formData.termsAccepted) tempErrors.termsAccepted = 'You must accept the terms';
+    return tempErrors;
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const validationErrors = validate();
+    if (Object.keys(validationErrors).length > 0) {
+      setErrors(validationErrors);
+    } else {
+      setErrors({});
+      console.log('Submitted:', formData);
+      // Simulate navigation after success
+      navigate('/shops');
+    }
+  };
+
+  return (
+    <div className="shop-owner-signup-container">
+      <h1>Create Your Shop Owner Account</h1>
+      <p>Join us as a shop owner and start selling!</p>
+      <form onSubmit={handleSubmit}>
+        <label>Username</label>
+        <input type="text" name="username" value={formData.username} onChange={handleChange} />
+        {errors.username && <small>{errors.username}</small>}
+
+        <label>Email</label>
+        <input type="email" name="email" value={formData.email} onChange={handleChange} />
+        {errors.email && <small>{errors.email}</small>}
+
+        <label>Phone Number</label>
+        <input type="tel" name="phone" value={formData.phone} onChange={handleChange} />
+        {errors.phone && <small>{errors.phone}</small>}
+
+        <label>University</label>
+        <select name="university" value={formData.university} onChange={handleChange}>
+          <option value="">----------</option>
+          <option value="Unilag">Unilag</option>
+          <option value="UI">UI</option>
+          <option value="OAU">OAU</option>
+        </select>
+        {errors.university && <small>{errors.university}</small>}
+
+        <label>Password</label>
+        <input type="password" name="password" value={formData.password} onChange={handleChange} />
+        {errors.password && <small>{errors.password}</small>}
+
+        <label>Confirm Password</label>
+        <input type="password" name="confirmPassword" value={formData.confirmPassword} onChange={handleChange} />
+        {errors.confirmPassword && <small>{errors.confirmPassword}</small>}
+
+        <label>Shop Name</label>
+        <input type="text" name="shopName" value={formData.shopName} onChange={handleChange} />
+        {errors.shopName && <small>{errors.shopName}</small>}
+
+        <label>Shop Location</label>
+        <input type="text" name="shopLocation" value={formData.shopLocation} onChange={handleChange} />
+        {errors.shopLocation && <small>{errors.shopLocation}</small>}
+
+        <label>Shop Scope</label>
+        <select name="shopScope" value={formData.shopScope} onChange={handleChange}>
+          <option value="Local">Local</option>
+          <option value="Global">Global</option>
+        </select>
+
+        <label className="checkbox">
+          <input type="checkbox" name="termsAccepted" checked={formData.termsAccepted} onChange={handleChange} />
+          I accept the <a href="#">Terms and Conditions</a> *
+        </label>
+        {errors.termsAccepted && <small>{errors.termsAccepted}</small>}
+
+        <button type="submit">Sign Up</button>
+      </form>
+    </div>
+  );
+}
+
+export default ShopOwnerSignup;
