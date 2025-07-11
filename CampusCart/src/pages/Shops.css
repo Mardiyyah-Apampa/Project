@@ -1,0 +1,67 @@
+.shops-container {
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.shops-title {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 30px;
+  color: #1e3a8a;
+}
+
+.shops-search {
+  margin-bottom: 30px;
+}
+
+.shops-search input {
+  width: 50%;
+  padding: 10px 15px;
+  border: 1px solid #ccc;
+  border-radius: 30px;
+  font-size: 16px;
+}
+
+.shops-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.shop-card {
+  background-color: #f1f5f9;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.shop-card img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  margin-bottom: 10px;
+  border-radius: 50%;
+}
+
+.shop-card h2 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: #374151;
+}
+
+.shop-card p {
+  color: #6b7280;
+  font-size: 14px;
+}
+
+.no-shops {
+  margin-top: 40px;
+  font-size: 18px;
+  color: #6b7280;
+}
